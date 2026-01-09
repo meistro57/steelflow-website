@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-carbon text-white antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-carbon-200;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-steel-500 hover:bg-steel-400 rounded;
+  }
+}
+
+@layer components {
+  /* Industrial text styles */
+  .text-industrial {
+    @apply font-mono uppercase tracking-wider;
+  }
+  
+  .text-technical {
+    @apply font-mono text-sm tracking-wide;
+  }
+  
+  /* Glow effects */
+  .glow-forge {
+    text-shadow: 0 0 20px theme('colors.forge.DEFAULT'),
+                 0 0 40px theme('colors.forge.DEFAULT'),
+                 0 0 60px theme('colors.forge.DEFAULT');
+  }
+  
+  .glow-weld {
+    text-shadow: 0 0 20px theme('colors.weld.DEFAULT'),
+                 0 0 40px theme('colors.weld.DEFAULT');
+  }
+  
+  .glow-plasma {
+    text-shadow: 0 0 20px theme('colors.plasma.DEFAULT'),
+                 0 0 40px theme('colors.plasma.DEFAULT');
+  }
+  
+  /* Metallic gradient */
+  .bg-steel-gradient {
+    background: linear-gradient(
+      135deg,
+      theme('colors.steel.700') 0%,
+      theme('colors.steel.500') 50%,
+      theme('colors.steel.700') 100%
+    );
+  }
+  
+  /* Grid background */
+  .bg-grid {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  /* Welding spark animation */
+  @keyframes spark {
+    0%, 100% {
+      opacity: 0;
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-10px) scale(1.2);
+    }
+  }
+  
+  .spark {
+    animation: spark 1.5s ease-in-out infinite;
+  }
+  
+  /* Industrial card */
+  .card-industrial {
+    @apply bg-steel-800 border border-steel-600 rounded-lg p-6 shadow-xl;
+    @apply hover:border-forge transition-all duration-300;
+    @apply backdrop-blur-sm;
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    @apply bg-forge hover:bg-forge-600 text-white font-semibold;
+    @apply px-6 py-3 rounded-lg transition-all duration-300;
+    @apply shadow-lg hover:shadow-forge/50 hover:scale-105;
+    @apply uppercase tracking-wider text-sm;
+  }
+  
+  .btn-secondary {
+    @apply bg-steel-700 hover:bg-steel-600 text-white font-semibold;
+    @apply px-6 py-3 rounded-lg transition-all duration-300;
+    @apply border border-steel-500 hover:border-weld;
+    @apply uppercase tracking-wider text-sm;
+  }
+  
+  /* Section container */
+  .section {
+    @apply min-h-screen flex items-center justify-center;
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-content {
+    @apply max-w-7xl mx-auto w-full;
+  }
+}
+
+@layer utilities {
+  /* Animation delays */
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  /* Perspective utilities for 3D effects */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  /* Backdrop blur variations */
+  .backdrop-blur-light {
+    backdrop-filter: blur(8px);
+  }
+  
+  .backdrop-blur-medium {
+    backdrop-filter: blur(16px);
+  }
+  
+  .backdrop-blur-heavy {
+    backdrop-filter: blur(24px);
+  }
+}
