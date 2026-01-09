@@ -103,7 +103,9 @@ const DesignSystem = () => {
                     <div className="text-3xl font-display font-bold text-white">STEELFLOW MRP</div>
                   </div>
                   <div>
-                    <div className="text-steel-400 text-xs font-mono mb-1">TECHNICAL / JETBRAINS MONO</div>
+                    <div className="text-steel-400 text-xs font-mono mb-1">
+                      TECHNICAL / JETBRAINS MONO
+                    </div>
                     <div className="text-lg font-mono text-forge">JOB-2025-001-A</div>
                   </div>
                   <div>
@@ -127,7 +129,9 @@ const DesignSystem = () => {
                       <div className="w-2 h-2 bg-forge rounded-full" />
                       <div>
                         <div className="text-white font-bold text-sm">High Contrast</div>
-                        <div className="text-steel-400 text-xs">Readable in bright, dusty environments</div>
+                        <div className="text-steel-400 text-xs">
+                          Readable in bright, dusty environments
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -136,7 +140,9 @@ const DesignSystem = () => {
                       <div className="w-2 h-2 bg-weld rounded-full" />
                       <div>
                         <div className="text-white font-bold text-sm">Touch Optimized</div>
-                        <div className="text-steel-400 text-xs">Large tap targets for gloved hands</div>
+                        <div className="text-steel-400 text-xs">
+                          Large tap targets for gloved hands
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -145,7 +151,9 @@ const DesignSystem = () => {
                       <div className="w-2 h-2 bg-plasma rounded-full" />
                       <div>
                         <div className="text-white font-bold text-sm">Industrial Aesthetic</div>
-                        <div className="text-steel-400 text-xs">Authentic steel fabrication feel</div>
+                        <div className="text-steel-400 text-xs">
+                          Authentic steel fabrication feel
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -167,14 +175,10 @@ const DesignSystem = () => {
               </div>
               <h3 className="text-2xl font-bold text-white font-display">Shop Floor Ready</h3>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-4">
-              <button className="btn-primary w-full justify-center">
-                PRIMARY ACTION
-              </button>
-              <button className="btn-secondary w-full justify-center">
-                SECONDARY ACTION
-              </button>
+              <button className="btn-primary w-full justify-center">PRIMARY ACTION</button>
+              <button className="btn-secondary w-full justify-center">SECONDARY ACTION</button>
               <button className="bg-plasma hover:bg-plasma-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-plasma/50 hover:scale-105 uppercase tracking-wider text-sm w-full">
                 SPECIAL ACTION
               </button>

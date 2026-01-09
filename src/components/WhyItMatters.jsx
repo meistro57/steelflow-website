@@ -46,8 +46,8 @@ const WhyItMatters = () => {
               <span className="text-white"> MATTERS</span>
             </h2>
             <p className="text-steel-300 text-lg max-w-3xl mx-auto">
-              The steel fabrication industry deserves better than outdated, 
-              expensive software that doesn't work the way modern shops operate.
+              The steel fabrication industry deserves better than outdated, expensive software that
+              doesn&apos;t work the way modern shops operate.
             </p>
           </motion.div>
 
@@ -62,15 +62,13 @@ const WhyItMatters = () => {
                 transition={{ delay: index * 0.1 }}
                 className="card-industrial group"
               >
-                <div className={`w-12 h-12 rounded-lg bg-${problem.color}/10 border border-${problem.color}/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                <div
+                  className={`w-12 h-12 rounded-lg bg-${problem.color}/10 border border-${problem.color}/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+                >
                   <problem.icon className={`text-${problem.color}`} size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 font-display">
-                  {problem.title}
-                </h3>
-                <p className="text-steel-400">
-                  {problem.description}
-                </p>
+                <h3 className="text-xl font-bold text-white mb-2 font-display">{problem.title}</h3>
+                <p className="text-steel-400">{problem.description}</p>
               </motion.div>
             ))}
           </div>
@@ -87,10 +85,10 @@ const WhyItMatters = () => {
                 Built by fabricators, for fabricators
               </h3>
               <p className="text-steel-300 text-lg leading-relaxed">
-                SteelFlow MRP combines industrial design principles with modern technology 
-                to create an MRP system that actually works on the shop floor. High contrast 
-                for bright environments, touch-optimized for tablets, and straightforward 
-                workflows that match how steel shops actually operate.
+                SteelFlow MRP combines industrial design principles with modern technology to create
+                an MRP system that actually works on the shop floor. High contrast for bright
+                environments, touch-optimized for tablets, and straightforward workflows that match
+                how steel shops actually operate.
               </p>
               <div className="flex flex-wrap justify-center gap-4 pt-4">
                 <span className="px-4 py-2 bg-forge/20 border border-forge/40 rounded-full text-forge font-mono text-sm">

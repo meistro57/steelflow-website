@@ -40,15 +40,13 @@ const Architecture = () => {
                 transition={{ delay: index * 0.1 }}
                 className="card-industrial text-center"
               >
-                <div className={`w-16 h-16 mx-auto rounded-lg bg-${tech.color}/10 border border-${tech.color}/30 flex items-center justify-center mb-4`}>
+                <div
+                  className={`w-16 h-16 mx-auto rounded-lg bg-${tech.color}/10 border border-${tech.color}/30 flex items-center justify-center mb-4`}
+                >
                   <tech.icon className={`text-${tech.color}`} size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 font-display">
-                  {tech.name}
-                </h3>
-                <p className="text-steel-400 text-sm">
-                  {tech.description}
-                </p>
+                <h3 className="text-xl font-bold text-white mb-2 font-display">{tech.name}</h3>
+                <p className="text-steel-400 text-sm">{tech.description}</p>
               </motion.div>
             ))}
           </div>
@@ -63,7 +61,7 @@ const Architecture = () => {
             <h3 className="text-2xl font-bold text-white font-display mb-8 text-center">
               System Architecture
             </h3>
-            
+
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {/* Frontend */}
               <div className="space-y-3">

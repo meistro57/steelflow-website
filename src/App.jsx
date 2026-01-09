@@ -23,10 +23,10 @@ function App() {
     <div className="relative bg-carbon min-h-screen">
       {/* Background grid */}
       <div className="fixed inset-0 bg-grid opacity-30 pointer-events-none" />
-      
+
       {/* Navigation */}
       <Navigation scrolled={scrolled} />
-      
+
       {/* Main content */}
       <main className="relative z-10">
         <Hero />
@@ -36,7 +36,7 @@ function App() {
         <Architecture />
         <GetInvolved />
       </main>
-      
+
       {/* Footer */}
       <footer className="relative z-10 border-t border-steel-700 bg-carbon-400 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,25 +47,25 @@ function App() {
               <span>Open Source Industrial Software</span>
             </div>
             <div className="flex gap-6">
-              <a 
-                href="https://github.com/meistro57/SteelFlow-MRP" 
-                target="_blank" 
+              <a
+                href="https://github.com/meistro57/SteelFlow-MRP"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-steel-300 hover:text-forge transition-colors"
               >
                 GitHub
               </a>
-              <a 
-                href="https://github.com/meistro57/SteelFlow-MRP#readme" 
-                target="_blank" 
+              <a
+                href="https://github.com/meistro57/SteelFlow-MRP#readme"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-steel-300 hover:text-weld transition-colors"
               >
                 Documentation
               </a>
-              <a 
-                href="https://github.com/meistro57/SteelFlow-MRP/issues" 
-                target="_blank" 
+              <a
+                href="https://github.com/meistro57/SteelFlow-MRP/issues"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-steel-300 hover:text-plasma transition-colors"
               >

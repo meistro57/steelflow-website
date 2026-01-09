@@ -18,8 +18,8 @@ const GetInvolved = () => {
               <span className="text-weld">INVOLVED</span>
             </h2>
             <p className="text-steel-300 text-lg max-w-3xl mx-auto">
-              SteelFlow is open source and community-driven. Join us in building 
-              better software for steel fabrication.
+              SteelFlow is open source and community-driven. Join us in building better software for
+              steel fabrication.
             </p>
           </motion.div>
 
@@ -103,15 +103,13 @@ const GetInvolved = () => {
                   <MessageCircle className="text-plasma" size={24} />
                 </div>
               </div>
-              
-              <h3 className="text-3xl font-bold text-white font-display">
-                Help Shape the Future
-              </h3>
-              
+
+              <h3 className="text-3xl font-bold text-white font-display">Help Shape the Future</h3>
+
               <p className="text-steel-300 text-lg leading-relaxed max-w-2xl mx-auto">
-                Whether you're a developer, fabricator, or just interested in better 
-                industrial software, your contributions make a difference. Report bugs, 
-                suggest features, contribute code, or share your experience.
+                Whether you&apos;re a developer, fabricator, or just interested in better industrial
+                software, your contributions make a difference. Report bugs, suggest features,
+                contribute code, or share your experience.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -145,8 +143,11 @@ const GetInvolved = () => {
             className="text-center"
           >
             <p className="text-steel-400 text-sm font-mono">
-              Released under the MIT License • 
-              <a href="https://github.com/meistro57/SteelFlow-MRP/blob/main/LICENSE" className="text-forge hover:text-forge-400 ml-1">
+              Released under the MIT License •
+              <a
+                href="https://github.com/meistro57/SteelFlow-MRP/blob/main/LICENSE"
+                className="text-forge hover:text-forge-400 ml-1"
+              >
                 View License
               </a>
             </p>

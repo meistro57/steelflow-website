@@ -3,12 +3,11 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Float } from '@react-three/drei'
 import { motion } from 'framer-motion'
 import { ChevronDown, Github, Star } from 'lucide-react'
-import * as THREE from 'three'
 
 // 3D Steel I-Beam Component
 const SteelBeam = () => {
   const meshRef = useRef()
-  
+
   useFrame((state) => {
     if (meshRef.current) {
       meshRef.current.rotation.y = state.clock.elapsedTime * 0.2
@@ -22,34 +21,26 @@ const SteelBeam = () => {
         {/* Main vertical web */}
         <mesh position={[0, 0, 0]}>
           <boxGeometry args={[0.3, 4, 0.05]} />
-          <meshStandardMaterial 
-            color="#34495e" 
-            metalness={0.9} 
+          <meshStandardMaterial
+            color="#34495e"
+            metalness={0.9}
             roughness={0.2}
             envMapIntensity={1}
           />
         </mesh>
-        
+
         {/* Top flange */}
         <mesh position={[0, 2, 0]}>
           <boxGeometry args={[1.2, 0.15, 0.6]} />
-          <meshStandardMaterial 
-            color="#2c3e50" 
-            metalness={0.9} 
-            roughness={0.2}
-          />
+          <meshStandardMaterial color="#2c3e50" metalness={0.9} roughness={0.2} />
         </mesh>
-        
+
         {/* Bottom flange */}
         <mesh position={[0, -2, 0]}>
           <boxGeometry args={[1.2, 0.15, 0.6]} />
-          <meshStandardMaterial 
-            color="#2c3e50" 
-            metalness={0.9} 
-            roughness={0.2}
-          />
+          <meshStandardMaterial color="#2c3e50" metalness={0.9} roughness={0.2} />
         </mesh>
-        
+
         {/* Edge glow effect */}
         <pointLight position={[0, 2, 0]} color="#FF6B35" intensity={2} distance={3} />
         <pointLight position={[0, -2, 0]} color="#4A90E2" intensity={2} distance={3} />
@@ -84,13 +75,16 @@ const Hero = () => {
   useEffect(() => {
     // Fetch GitHub stars (optional, will fail gracefully)
     fetch('https://api.github.com/repos/meistro57/SteelFlow-MRP')
-      .then(res => res.json())
-      .then(data => setGithubStars(data.stargazers_count))
+      .then((res) => res.json())
+      .then((data) => setGithubStars(data.stargazers_count))
       .catch(() => {}) // Fail silently
   }, [])
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Animated background particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
@@ -151,15 +145,15 @@ const Hero = () => {
                   Material Requirements Planning
                 </span>
               </motion.h1>
-              
+
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
                 className="text-steel-300 text-lg lg:text-xl max-w-xl leading-relaxed"
               >
-                Modern, open-source MRP system built for steel fabrication shops. 
-                Industrial design meets powerful functionality.
+                Modern, open-source MRP system built for steel fabrication shops. Industrial design
+                meets powerful functionality.
               </motion.p>
             </div>
 
@@ -185,11 +179,8 @@ const Hero = () => {
                   </span>
                 )}
               </a>
-              
-              <a
-                href="#features"
-                className="btn-secondary inline-flex items-center gap-2"
-              >
+
+              <a href="#features" className="btn-secondary inline-flex items-center gap-2">
                 <span>EXPLORE FEATURES</span>
               </a>
             </motion.div>
@@ -222,9 +213,9 @@ const Hero = () => {
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} />
               <spotLight position={[-10, -10, -10]} angle={0.15} penumbra={1} intensity={0.5} />
               <SteelBeam />
-              <OrbitControls 
-                enableZoom={false} 
-                autoRotate 
+              <OrbitControls
+                enableZoom={false}
+                autoRotate
                 autoRotateSpeed={0.5}
                 enablePan={false}
               />
@@ -266,10 +257,7 @@ const Hero = () => {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-steel-400 hover:text-forge transition-colors cursor-pointer"
       >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
+        <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
           <ChevronDown size={32} />
         </motion.div>
       </motion.a>

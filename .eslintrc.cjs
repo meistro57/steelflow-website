@@ -29,6 +29,28 @@ module.exports = {
     'react-refresh'
   ],
   rules: {
+    'react/prop-types': 'off',
+    'react/no-unknown-property': ['error', { 
+      ignore: [
+        'position', 
+        'args', 
+        'rotation', 
+        'intensity', 
+        'angle', 
+        'penumbra', 
+        'distance', 
+        'metalness', 
+        'roughness', 
+        'envMapIntensity', 
+        'attach', 
+        'object', 
+        'geometry', 
+        'material',
+        'speed',
+        'rotationIntensity',
+        'floatIntensity'
+      ] 
+    }],
     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': [
       'warn',

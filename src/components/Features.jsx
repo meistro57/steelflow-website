@@ -72,15 +72,13 @@ const Features = () => {
                 transition={{ delay: index * 0.1 }}
                 className="card-industrial group hover:scale-105 transition-transform duration-300"
               >
-                <div className={`w-14 h-14 rounded-lg bg-${feature.color}/10 border border-${feature.color}/30 flex items-center justify-center mb-4`}>
+                <div
+                  className={`w-14 h-14 rounded-lg bg-${feature.color}/10 border border-${feature.color}/30 flex items-center justify-center mb-4`}
+                >
                   <feature.icon className={`text-${feature.color}`} size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 font-display">
-                  {feature.title}
-                </h3>
-                <p className="text-steel-400 leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="text-xl font-bold text-white mb-3 font-display">{feature.title}</h3>
+                <p className="text-steel-400 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
