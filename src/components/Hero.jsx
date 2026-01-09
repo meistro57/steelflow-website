@@ -3,6 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Float } from '@react-three/drei'
 import { motion } from 'framer-motion'
 import { ChevronDown, Github, Star } from 'lucide-react'
+import * as THREE from 'three'
 
 // 3D Steel I-Beam Component
 const SteelBeam = () => {
@@ -85,7 +86,7 @@ const Hero = () => {
     fetch('https://api.github.com/repos/meistro57/SteelFlow-MRP')
       .then(res => res.json())
       .then(data => setGithubStars(data.stargazers_count))
-      .catch((error) => console.warn('Failed to fetch GitHub stars:', error))
+      .catch(() => {}) // Fail silently
   }, [])
 
   return (
@@ -94,7 +95,7 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <motion.div
-            key={`particle-${i}`}
+            key={i}
             className="absolute w-1 h-1 bg-forge rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
