@@ -17,7 +17,7 @@ const SteelBeam = () => {
 
   return (
     <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.5}>
-      <group ref={meshRef}>
+      <group ref={meshRef} scale={[1.35, 1.35, 1.35]}>
         {/* Main vertical web */}
         <mesh position={[0, 0, 0]}>
           <boxGeometry args={[0.3, 4, 0.05]} />
@@ -209,9 +209,11 @@ const Hero = () => {
               camera={{ position: [0, 0, 8], fov: 50 }}
               className="cursor-grab active:cursor-grabbing"
             >
-              <ambientLight intensity={0.3} />
-              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} />
-              <spotLight position={[-10, -10, -10]} angle={0.15} penumbra={1} intensity={0.5} />
+              <ambientLight intensity={0.45} />
+              <hemisphereLight intensity={0.35} color="#ffffff" groundColor="#1f2937" />
+              <spotLight position={[10, 12, 10]} angle={0.2} penumbra={0.9} intensity={1.2} />
+              <spotLight position={[-12, -10, -8]} angle={0.18} penumbra={1} intensity={0.7} />
+              <pointLight position={[0, 5, 4]} intensity={0.6} color="#f8c27d" />
               <SteelBeam />
               <OrbitControls
                 enableZoom={false}
