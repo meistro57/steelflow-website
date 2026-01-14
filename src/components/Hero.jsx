@@ -209,11 +209,13 @@ const Hero = () => {
               camera={{ position: [0, 0, 8], fov: 50 }}
               className="cursor-grab active:cursor-grabbing"
             >
-              <ambientLight intensity={0.45} />
-              <hemisphereLight intensity={0.35} color="#ffffff" groundColor="#1f2937" />
+              <ambientLight intensity={0.6} />
+              <hemisphereLight intensity={0.4} color="#ffffff" groundColor="#1f2937" />
+              <directionalLight position={[6, 6, 6]} intensity={1.1} color="#ffffff" />
               <spotLight position={[10, 12, 10]} angle={0.2} penumbra={0.9} intensity={1.2} />
               <spotLight position={[-12, -10, -8]} angle={0.18} penumbra={1} intensity={0.7} />
-              <pointLight position={[0, 5, 4]} intensity={0.6} color="#f8c27d" />
+              <pointLight position={[0, 5, 4]} intensity={0.9} color="#f8c27d" />
+              <pointLight position={[0, 0, 6]} intensity={0.8} color="#ffffff" />
               <SteelBeam />
               <OrbitControls
                 enableZoom={false}
